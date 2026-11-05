@@ -1,1 +1,0 @@
-import{b as o,d as r}from"./chunk-TQCNNCPV.js";import"./chunk-FKIYSND6.js";import"./chunk-YIJ7K3UW.js";import"./chunk-7EMZDBVU.js";var t=[{path:"",providers:[o(),r()],loadComponent:()=>import("./chunk-7U2RJQSK.js")}];export{t as default};
