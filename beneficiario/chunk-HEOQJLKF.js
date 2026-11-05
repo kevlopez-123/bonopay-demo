@@ -1,0 +1,1 @@
+import{I as r,ca as i}from"./chunk-GR7RG42B.js";var n=class e{_expiresAt=i(null);expiresAt=this._expiresAt.asReadonly();setExpiresAt(t){this._expiresAt.set(t)}clear(){this._expiresAt.set(null)}static \u0275fac=function(s){return new(s||e)};static \u0275prov=r({token:e,factory:e.\u0275fac,providedIn:"root"})};export{n as a};
