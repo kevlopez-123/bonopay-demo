@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>BonoPay | Demo</title>
+  <meta name="robots" content="noindex" />
+  <script>
+    // GitHub Pages sirve este archivo para cualquier ruta inexistente. Las rutas internas
+    // de cada portal (p. ej. /bonopay-demo/beneficiario/registro) se reenvian a la raiz
+    // del portal; su index.html restaura la ruta original antes de iniciar Angular.
+    (function () {
+      var parts = location.pathname.split('/');
+      var site = '/' + parts[1] + '/';
+      var app = parts[2];
+      if (['administrador', 'cliente', 'beneficiario'].indexOf(app) === -1) {
+        location.replace(site);
+        return;
+      }
+      var rest = parts.slice(3).join('/');
+      var path = '/' + rest + location.search + location.hash;
+      location.replace(site + app + '/?p=' + encodeURIComponent(path));
+    })();
+  </script>
+</head>
+<body></body>
+</html>
