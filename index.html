@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BonoPay | Demo — Motiva Soluciones</title>
+  <meta name="description" content="Demostración interactiva de la plataforma BonoPay con datos simulados." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #00aeb8;
+      --primary-dark: #00939b;
+      --primary-soft: #e6f6f7;
+      --bg: #eff6ff;
+      --ink: #1f2430;
+      --muted: #6f7683;
+      --line: #e4e8ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Poppins', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 48px 16px 40px; }
+    header { text-align: center; }
+    header img { height: 40px; }
+    .badge {
+      display: inline-block; margin-top: 20px; padding: 4px 12px;
+      border-radius: 999px; background: var(--primary-soft); color: var(--primary-dark);
+      font-size: 13px; font-weight: 600;
+    }
+    h1 { margin: 12px 0 8px; font-size: clamp(26px, 4vw, 36px); }
+    header p { margin: 0 auto; max-width: 560px; color: var(--muted); }
+    .grid { display: grid; gap: 20px; margin-top: 40px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card {
+      display: flex; flex-direction: column; background: #fff; border-radius: 16px;
+      border-top: 6px solid var(--primary); padding: 24px;
+      box-shadow: 0 10px 30px rgba(31, 42, 64, 0.08);
+    }
+    .card h2 { margin: 0 0 6px; font-size: 20px; }
+    .card p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+    dl { margin: 0 0 20px; padding: 12px 14px; background: #f7f8fa; border-radius: 10px; font-size: 13px; }
+    dt { color: var(--muted); }
+    dd { margin: 0 0 8px; font-weight: 600; word-break: break-all; }
+    dd:last-child { margin-bottom: 0; }
+    .btn {
+      margin-top: auto; display: block; text-align: center; text-decoration: none;
+      background: var(--primary); color: #fff; font-weight: 600; padding: 12px 16px;
+      border-radius: 12px; transition: background 0.15s;
+    }
+    .btn:hover { background: var(--primary-dark); }
+    footer { margin-top: 40px; text-align: center; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="logo-motiva.svg" alt="Motiva Soluciones" />
+      <div><span class="badge">Entorno de demostración</span></div>
+      <h1>Plataforma BonoPay</h1>
+      <p>Recorre los tres portales con datos simulados. Nada de lo que veas aquí se conecta a sistemas reales.</p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Portal Administrador</h2>
+        <p>Supervisión de dispersiones por API y por lote, panel de control y operación.</p>
+        <dl>
+          <dt>Usuario</dt><dd>admin@motivasoluciones.com</dd>
+          <dt>Contraseña</dt><dd>cualquiera</dd>
+          <dt>Código OTP</dt><dd>123456</dd>
+        </dl>
+        <a class="btn" href="administrador/">Abrir portal</a>
+      </article>
+
+      <article class="card">
+        <h2>Portal Cliente</h2>
+        <p>Empresa que envía incentivos: beneficiarios, dispersiones, carga masiva y reportes.</p>
+        <dl>
+          <dt>Usuario</dt><dd>cliente@motivasoluciones.com</dd>
+          <dt>Contraseña</dt><dd>cualquiera</dd>
+          <dt>Código OTP</dt><dd>123456</dd>
+        </dl>
+        <a class="btn" href="cliente/">Abrir portal</a>
+      </article>
+
+      <article class="card">
+        <h2>Portal Beneficiario</h2>
+        <p>Persona que recibe el incentivo: registro por invitación y actualización de datos de pago.</p>
+        <dl>
+          <dt>DNI con perfil completo</dt><dd>45678912</dd>
+          <dt>Cualquier otro DNI</dt><dd>inicia un registro nuevo</dd>
+          <dt>Código OTP</dt><dd>123456</dd>
+        </dl>
+        <a class="btn" href="beneficiario/registro?token=demo">Abrir portal</a>
+      </article>
+    </section>
+
+    <footer>© Motiva Soluciones · Los datos mostrados son ficticios.</footer>
+  </main>
+</body>
+</html>
